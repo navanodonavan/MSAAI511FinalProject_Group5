@@ -5,37 +5,32 @@ This project is a part of the AAI-511 course in the Applied Artificial Intellige
 
 ## Installation
 
-Launch Jupyter notebook and open the `TBD` file from this repository. 
+Launch Jupyter notebook and open the `MSAAI511_CNN_LSTM_Model_Group5_Final.ipynb` file from this repository. 
 
 ## Required libraries to be installed including:
 
-    import math
-    import os
-    import librosa
-    import librosa.display
+    import pretty_midi
     import numpy as np
     import pandas as pd
-    from sklearn.preprocessing import LabelEncoder
-    from sklearn.model_selection import train_test_split
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-    from torch.utils.data import DataLoader, TensorDataset
-    from sklearn.metrics import classification_report, confusion_matrix
-    import seaborn as sns
     import matplotlib.pyplot as plt
-    from sklearn.preprocessing import StandardScaler
-    from collections import Counter
+    from sklearn.preprocessing import MinMaxScaler
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import mean_squared_error
+    from sklearn.preprocessing import LabelEncoder
+    import sys
+    import os
+    from pathlib import Path
+    from sklearn.metrics import classification_report
+    from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-**For HuBERT Model**
+**For PyTorch**
 
 Import the following (in addition to the above)
 
-    from transformers import Wav2Vec2Processor, HubertModel, Wav2Vec2Model
-    from transformers import Wav2Vec2FeatureExtractor
-    from torch.utils.data import DataLoader, TensorDataset, Dataset
-    from sklearn.cluster import KMeans
-    from sklearn.decomposition import PCA
+    import torch
+    import torch.nn as nn
+    from torch.utils.data import Dataset, DataLoader
+    import torch.optim as optim
 
 Please note, to utilize CUDA, the appropriate PyTorch CUDA version needs to be installed in your environment via pip or conda.
   
@@ -74,4 +69,4 @@ The primary objective of this project is to develop a deep learning model that c
 
 ### Project Description
 
-Leveraging CNNs and LSTMS to train and classify music genre and composers from audio samples.
+Leveraging CNNs and LSTMS to train and classify music genre and composers from MIDI files.
